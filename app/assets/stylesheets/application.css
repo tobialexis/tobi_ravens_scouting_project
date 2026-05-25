@@ -260,3 +260,23 @@ background:#A7F3D0;
 background:#D1D5DB;
 
 }
+
+.error-box{
+
+border-left:5px solid #EF4444;
+
+background:#FFF1F2;
+
+}
+
+.error-box h3{
+
+color:#DC2626;
+
+}
+
+.error-box ul{
+
+padding-left:20px;
+
+}

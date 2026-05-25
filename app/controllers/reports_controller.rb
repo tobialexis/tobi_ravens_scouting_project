@@ -6,7 +6,7 @@ class ReportsController < ApplicationController
     if params[:position].present?
     @reports = Report.where(position: params[:position])
   else
-    @reports = Report.all
+@reports = Report.order(created_at: :desc)
   end
 
   end

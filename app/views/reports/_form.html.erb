@@ -1,3 +1,30 @@
+<% if report.errors.any? %>
+
+<div class="card error-box">
+
+<h3>
+
+⚠ Please fix the following:
+
+</h3>
+
+<ul>
+
+<% report.errors.full_messages.each do |message| %>
+
+<li>
+
+<%= message %>
+
+</li>
+
+<% end %>
+
+</ul>
+
+</div>
+
+<% end %>
 <%= form_with(model: report) do |form| %>
 
 <div>
