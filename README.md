@@ -1,19 +1,62 @@
-# Oluwatobi'a Ravens Application Project
+# Tobi Ravens Scouting Project
 
-This project is a Ruby on Rails application built for the Baltimore Ravens Football Systems Developer application process. The purpose of the application is to provide a tool that  creates and manages football scouting reports.
+## Project Overview
 
-Users can create reports for players, record evaluations, assign grades, and review player information in an organized format. I wanted to keep the project focused on the requirements listed but also adds a few football specific details and design choices that made the application feel more personalized. 
+This project was built as part of the Baltimore Ravens Football Systems Developer application process. The goal was to create a simple application that allows users to create and manage football scouting reports.
+
+While building the project, I wanted to stay within the requested scope and focus on creating a tool that felt realistic for scouting workflows rather than going into a large football management system. I also wanted the application to reflect some personality through small design choices while keeping it organized and easy to use.
+
+The application allows users to create reports for players, record evaluations, assign grades, and review scouting information in a structured way.
+
 
 ## Features
 
-- Create new scouting reports
-- View player scouting reports
-- Edit existing reports
-- Delete reports
-- Filter reports by player position
-- Add player evaluation details and scouting notes
-- Assign player grades with custom prospect labels
-- Custom UI styling and personalized design elements
+Current features include:
+
+- Creating scouting reports
+- Viewing player reports
+- Editing existing reports
+- Deleting reports
+- Filtering reports by player position
+- Adding player strengths and weaknesses
+- Assigning grades and prospect labels
+- Adding scouting notes
+- Seeded sample prospect data
+- Custom styling and UI enhancements
+
+
+## Scouting Information Included
+
+Each report contains:
+
+- Player name
+- Position
+- College
+- Height
+- Weight
+- 40-yard time
+- Player comparison
+- Draft projection
+- Strengths
+- Weaknesses
+- Grade
+- Scout notes
+
+
+## Design Decisions
+
+A big goal for this project was keeping the application simple while still making it feel like an actual scouting tool.
+
+Some choices I intentionally made:
+
+- Added football-specific scouting fields to make reports feel more realistic
+- Included prospect labels tied to player grades
+- Added filtering by position to make reports easier to navigate
+- Added small UI details and personalized styling to improve usability
+- Used fictional player data rather than relying entirely on well known athletes
+
+I wanted the project to feel practical and focused without becoming overly complex.
+
 
 ## Technologies Used
 
@@ -22,19 +65,21 @@ Users can create reports for players, record evaluations, assign grades, and rev
 - SQLite
 - HTML
 - CSS
-- Git and GitHub
+- Git
+- GitHub
+
+
 
 ## Running the Application Locally
 
 Clone the repository:
 
-git clone YOUR_REPOSITORY_URL
-
+git clone https://github.com/tobialexis/tobi_ravens_scouting_project.git
 Move into the project directory:
 
 cd tobi_ravens_scouting_project
 
-Install required gems:
+Install dependencies:
 
 bundle install
 
@@ -46,24 +91,28 @@ Load sample scouting data:
 
 rails db:seed
 
-Start the server:
+Start the Rails server:
 
 rails server
 
-Open the application in your browser:
+Open the application:
 
 http://localhost:3000/reports
 
+
+
 ## Future Improvements
 
-If I had more time to continue building the project, some additional features I would consider adding include:
+If I had more time to continue developing the project, I would consider
 
-- User authentication and login functionality
-- Advanced filtering options
+- User authentication and permissions
+- Additional filtering options
 - Player profile images
-- Exporting reports to PDF
-- Additional scouting metrics and player data
+- PDF export functionality
+- Additional scouting metrics
+- Historical report tracking
 
-## My AI Usage
 
-AI tools were used as a learning and troubleshooting resource during development. I mainly switched between Claude and Chatgpt. Both were primarily used to help explain concepts, debug issues, and provide implementation guidance while building the application. All code was reviewed, adjusted, and integrated manually throughout the project.
+## AI Usage
+
+The AI tools i used throughout the project were Claude and Chatgpt. I used both throughout development primarily as a learning and troubleshooting resource. They were used to help explain concepts, debug issues, and provide implementation guidance. All code and implementation decisions were reviewed, modified and integrated manually throughout the project.
