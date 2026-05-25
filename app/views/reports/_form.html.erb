@@ -1,0 +1,111 @@
+<%= form_with(model: report) do |form| %>
+
+<div>
+
+<%= form.label :player_name %>
+<%= form.text_field :player_name %>
+
+</div>
+
+<div>
+
+<%= form.label :position %>
+
+<%= form.select :position,
+['QB','RB','WR','TE','OL','DL','LB','CB','S'] %>
+
+</div>
+
+<div>
+
+<%= form.label :college %>
+<%= form.text_field :college %>
+
+</div>
+
+<div>
+
+<%= form.label :height %>
+<%= form.text_field :height,
+placeholder:"6'2" %>
+
+</div>
+
+<div>
+
+<%= form.label :weight %>
+<%= form.text_field :weight,
+placeholder:"205 lbs" %>
+
+</div>
+
+<div>
+
+<%= form.label :speed_40, "40 Yard Time" %>
+<%= form.text_field :speed_40,
+placeholder:"4.34 seconds" %>
+
+</div>
+
+<div>
+
+<%= form.label :player_comparison,
+"NFL Comparison" %>
+
+<%= form.text_field :player_comparison,
+placeholder:"Lamar Jackson" %>
+
+</div>
+
+<div>
+
+<%= form.label :draft_projection %>
+
+<%= form.select :draft_projection,
+[
+"Round 1",
+"Round 2",
+"Round 3",
+"Round 4",
+"Round 5",
+"Round 6",
+"Round 7",
+"Undrafted"
+] %>
+
+</div>
+
+<div>
+
+<%= form.label :strengths %>
+<%= form.text_area :strengths %>
+
+</div>
+
+<div>
+
+<%= form.label :weaknesses %>
+<%= form.text_area :weaknesses %>
+
+</div>
+
+<div>
+
+<%= form.label :grade %>
+
+<%= form.number_field :grade %>
+
+</div>
+
+<div>
+
+<%= form.label :notes %>
+
+<%= form.text_area :notes %>
+
+</div>
+
+<%= form.submit "Save Scouting Report",
+class:"btn" %>
+
+<% end %>
