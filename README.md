@@ -1,4 +1,4 @@
-# Tobi Ravens Scouting Project
+# Tobi's Ravens Scouting Project
 
 ## Project Overview
 
@@ -68,9 +68,6 @@ I wanted the project to feel practical and focused without becoming overly compl
 - Git
 - GitHub
 
-
-
-## Running the Application Locally
 
 ## Running the Application Locally
 
