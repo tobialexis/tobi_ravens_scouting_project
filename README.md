@@ -72,32 +72,72 @@ I wanted the project to feel practical and focused without becoming overly compl
 
 ## Running the Application Locally
 
-Clone the repository:
+## Running the Application Locally
 
+Follow the steps below to run the application on your computer.
+
+### Step 1: Download a copy of the project
+
+Open a command line window on your computer:
+
+- Mac: Open the Terminal application
+- Windows: Open Command Prompt or PowerShell
+
+Enter the following command:
+
+```text
 git clone https://github.com/tobialexis/tobi_ravens_scouting_project.git
-Move into the project directory:
+```
 
+### Step 2: Move into the project folder
+
+Enter:
+
+```text
 cd tobi_ravens_scouting_project
+```
 
-Install dependencies:
+### Step 3: Install the required project files and dependencies
 
+Enter:
+
+```text
 bundle install
+```
 
-Set up the database:
+### Step 4: Set up the database
 
+Enter:
+
+```text
 rails db:migrate
+```
 
-Load sample scouting data:
+### Step 5: Load sample scouting report data
 
+Enter:
+
+```text
 rails db:seed
+```
 
-Start the Rails server:
+### Step 6: Start the application
 
+Enter:
+
+```text
 rails server
+```
 
-Open the application:
+### Step 7: Open the application in your web browser
 
+Visit:
+
+```text
 http://localhost:3000/reports
+```
+
+The application should now be running locally and ready to use.
 
 
 
