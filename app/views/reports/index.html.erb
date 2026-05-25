@@ -37,6 +37,26 @@ class:"btn" %>
 
 <br><br>
 
+<% if @reports.empty? %>
+
+<div class="card">
+
+<h2>
+
+🩷 No scouting reports available
+
+</h2>
+
+<p>
+
+Create a report to begin evaluating prospects.
+
+</p>
+
+</div>
+
+<% end %>
+
 <% @reports.each do |report| %>
 
 <div class="card">
