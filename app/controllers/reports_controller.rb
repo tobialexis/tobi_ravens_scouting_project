@@ -1,14 +1,14 @@
 class ReportsController < ApplicationController
-  before_action :set_report, only: %i[ show edit update destroy ]
+  before_action :set_report, only: %i[show edit update destroy]
 
   # GET /reports or /reports.json
   def index
-    if params[:position].present?
-    @reports = Report.where(position: params[:position])
-  else
-@reports = Report.order(created_at: :desc)
-  end
-
+    @reports =
+      if params[:position].present?
+        Report.where(position: params[:position])
+      else
+        Report.order(created_at: :desc)
+      end
   end
 
   # GET /reports/1 or /reports/1.json
@@ -57,19 +57,33 @@ class ReportsController < ApplicationController
     @report.destroy!
 
     respond_to do |format|
-      format.html { redirect_to reports_path, notice: "Report was successfully destroyed.", status: :see_other }
+      format.html { redirect_to reports_path, notice: "Report was successfully deleted.", status: :see_other }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_report
-      @report = Report.find(params.expect(:id))
-    end
 
-    # Only allow a list of trusted parameters through.
-    def report_params
-      params.expect(report: [ :player_name, :position, :college, :height, :weight, :speed_40, :player_comparison, :draft_projection, :strengths, :weaknesses, :grade, :notes ])
-    end
+  def set_report
+    @report = Report.find(params.expect(:id))
+  end
+
+  def report_params
+    params.expect(
+      report: [
+        :player_name,
+        :position,
+        :college,
+        :height,
+        :weight,
+        :speed_40,
+        :player_comparison,
+        :draft_projection,
+        :strengths,
+        :weaknesses,
+        :grade,
+        :notes
+      ]
+    )
+  end
 end

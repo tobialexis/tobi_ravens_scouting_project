@@ -1,5 +1,7 @@
 <% content_for :title, "New report" %>
 
+<div class="form-container">
+
 <h1>New report</h1>
 
 <%= render "form", report: @report %>
@@ -8,4 +10,6 @@
 
 <div>
   <%= link_to "Back to reports", reports_path %>
+</div>
+
 </div>

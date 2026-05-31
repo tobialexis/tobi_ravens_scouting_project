@@ -47,7 +47,7 @@ Each report contains:
 
 A big goal for this project was keeping the application simple while still making it feel like an actual scouting tool.
 
-Some choices I intentionally made were::
+Some choices I intentionally made were:
 
 - Added football specific scouting fields to make reports feel more realistic
 - Included prospect labels tied to player grades

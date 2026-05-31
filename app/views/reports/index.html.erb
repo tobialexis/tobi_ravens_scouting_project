@@ -1,118 +1,92 @@
-<h1> Ravens Scouting Reports</h1>
+<div class="reports-container">
+
+  <h1>Ravens Scouting Reports</h1>
+
+  <%= form_with url: reports_path,
+                method: :get,
+                local: true,
+                class: "filter-form" do |form| %>
+
+    <%= form.select :position,
+                    ["", "QB", "RB", "WR", "TE", "OL", "DL", "LB", "CB", "S"],
+                    selected: params[:position] %>
+
+    <%= form.submit "Filter", class: "btn" %>
+
+    <%= link_to "Clear",
+                reports_path,
+                class: "btn" %>
+
+  <% end %>
+
+  <%= link_to "➕ Create New Report",
+              new_report_path,
+              class: "btn" %>
+
+  <br><br>
+
+  <% if @reports.empty? %>
+
+    <div class="card empty-state">
+
+      <h2>🩷 No scouting reports available</h2>
+
+      <p>Create a report to begin evaluating prospects.</p>
+
+    </div>
+
+  <% end %>
+
+  <% @reports.each do |report| %>
+
+    <div class="card">
+
+      <div class="avatar">
+        <%= initials(report.player_name) %>
+      </div>
+
+      <h2><%= report.player_name %></h2>
+
+      <p>
+        <strong>Position:</strong>
+        <%= report.position %>
+      </p>
+
+      <p>
+        <strong>College:</strong>
+        <%= report.college %>
+      </p>
+
+      <p>
+        <strong>40 Time:</strong>
+        <%= report.speed_40 %>
+      </p>
+
+      <p>
+        <strong>NFL Comparison:</strong>
+        <%= report.player_comparison %>
+      </p>
+
+      <p>
+        <strong>Draft Projection:</strong>
+        <%= report.draft_projection %>
+      </p>
+
+      <p>
+        <strong>Grade:</strong>
+        <%= report.grade %>
+      </p>
+
+      <p>
+        <%= scout_grade_label(report.grade) %>
+      </p>
+
+      <%= link_to "View Report",
+                  report,
+                  class: "btn" %>
+
+    </div>
+
+  <% end %>
 
 </div>
-<%= form_with url: reports_path,
-method: :get,
-local: true do |form| %>
-
-<%= form.select :position,
-[
-"",
-"QB",
-"RB",
-"WR",
-"TE",
-"OL",
-"DL",
-"LB",
-"CB",
-"S"
-],
-selected: params[:position]
-%>
-
-<%= form.submit "🔎 Filter",
-class:"btn" %>
-
-<%= link_to "Clear",
-reports_path,
-class:"btn" %>
-
-<% end %>
-
-<br>
-<%= link_to "➕ Create New Report",
-new_report_path,
-class:"btn" %>
-
-<br><br>
-
-<% if @reports.empty? %>
-
-<div class="card">
-
-<h2>
-
-🩷 No scouting reports available
-
-</h2>
-
-<p>
-
-Create a report to begin evaluating prospects.
-
-</p>
-
-</div>
-
-<% end %>
-
-<% @reports.each do |report| %>
-
-<div class="card">
-
-<div class="avatar">
-
-<%= initials(report.player_name) %>
-
-</div>
-
-<h2>
-
-<%= report.player_name %>
-
-</h2>
-
-<p>
-<strong>Position:</strong>
-<%= report.position %>
-</p>
-
-<p>
-<strong>College:</strong>
-<%= report.college %>
-</p>
-
-<p>
-<strong>40 Time:</strong>
-<%= report.speed_40 %>
-</p>
-
-<p>
-<strong>NFL Comparison:</strong>
-<%= report.player_comparison %>
-</p>
-
-<p>
-<strong>Draft Projection:</strong>
-<%= report.draft_projection %>
-</p>
-
-<p>
-<strong>Grade:</strong>
-<%= report.grade %>
-</p>
-
-<p>
-
-<%= scout_grade_label(report.grade) %>
-
-</p>
-
-<%= link_to "View Report",
-report,
-class:"btn" %>
-
-</div>
-
-<% end %>
