@@ -15,6 +15,7 @@ Current features include:
 
 - Creating scouting reports
 - Viewing player reports
+- Viewing Player photo
 - Editing existing reports
 - Deleting reports
 - Filtering reports by player position
@@ -30,6 +31,7 @@ Current features include:
 Each report contains:
 
 - Player name
+- Player Photo
 - Position
 - College
 - Height
@@ -53,7 +55,6 @@ Some choices I intentionally made were:
 - Included prospect labels tied to player grades
 - Added filtering by position to make reports easier to navigate
 - Added small UI details and personalized styling to improve usability
-- Used fictional player data rather than relying entirely on well known athletes
 
 My aim was to make the project to feel practical and focused without becoming overly complex.
 
@@ -143,19 +144,17 @@ http://localhost:3000/reports
 The application should now be running locally and ready to use.
 
 
-
 ## Future Improvements
 
 If I had more time to continue developing the project, I would consider
 
-- User authentication and permissions
-- Additional filtering options
-- Player profile images
-- PDF export functionality
-- Additional scouting metrics
-- Historical report tracking
+- Adding user authentication and role based access so multiple scouts could securely contribute reports
+- Expanding player profiles with additional statistics, combine results, and prospect information to provide a more complete evaluation
+- Building player comparison tools to evaluate prospects against current NFL players and previous draft classes
+- Tracking changes to scouting reports over time to see how player evaluations evolve throughout the scouting process
+- Adding PDF export functionality to make reports easier to share with coaches and other personnel
 
 
 ## AI Usage
 
-The AI tools i used throughout the project were Claude and Chatgpt. I used both throughout development primarily as a learning and troubleshooting resource. They were used to help explain concepts, debug issues, and provide implementation guidance. All code and implementation decisions were reviewed, modified and integrated manually throughout the project.
+The AI tools i used throughout the project were Claude and Chatgpt. I used both throughout development primarily as a learning and troubleshooting resource. They were used to help explain concepts, debug issues, and provide implementation guidance. All code and implementation decisions were reviewed, modified and integrated manually throughout my project.

@@ -1,7 +1,6 @@
 class ReportsController < ApplicationController
   before_action :set_report, only: %i[show edit update destroy]
 
-  # GET /reports or /reports.json
   def index
     @reports =
       if params[:position].present?
@@ -11,20 +10,16 @@ class ReportsController < ApplicationController
       end
   end
 
-  # GET /reports/1 or /reports/1.json
   def show
   end
 
-  # GET /reports/new
   def new
     @report = Report.new
   end
 
-  # GET /reports/1/edit
   def edit
   end
 
-  # POST /reports or /reports.json
   def create
     @report = Report.new(report_params)
 
@@ -39,7 +34,6 @@ class ReportsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /reports/1 or /reports/1.json
   def update
     respond_to do |format|
       if @report.update(report_params)
@@ -52,7 +46,6 @@ class ReportsController < ApplicationController
     end
   end
 
-  # DELETE /reports/1 or /reports/1.json
   def destroy
     @report.destroy!
 
@@ -82,7 +75,8 @@ class ReportsController < ApplicationController
         :strengths,
         :weaknesses,
         :grade,
-        :notes
+        :notes,
+        :photo
       ]
     )
   end

@@ -1,62 +1,61 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Ravens Scouting Project" %></title>
+    <title><%= content_for(:title) || "Ravens Project" %></title>
+
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Ravens Scouting Project">
+    <meta name="application-name" content="Ravens Project">
     <meta name="mobile-web-app-capable" content="yes">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= yield :head %>
 
-    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
-    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
-
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
 
-    <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
   </head>
 
   <body>
-  <nav class="navbar">
 
-<div class="logo">
+    <nav class="navbar">
 
-🏈 Ravens Scouting Project
+      <div class="navbar-header">
 
-</div>
+        <%= image_tag "ravenslogo.png",
+                      class: "nav-logo" %>
 
-<div>
+        <div class="logo">
+          Baltimore Ravens Scouting Tool
+        </div>
 
-<%= link_to "Home",
-reports_path,
-class:"nav-link" %>
+      </div>
 
-<%= link_to "New Report",
-new_report_path,
-class:"nav-link" %>
+      <div class="nav-actions">
 
-</div>
+        <%= link_to "Home",
+                    reports_path,
+                    class: "nav-link" %>
 
-</nav>
+        <%= link_to "New Report",
+                    new_report_path,
+                    class: "nav-link" %>
 
-<div class="page-content">
+      </div>
 
+    </nav>
 
-<%= yield %>
-</div>
+    <div class="page-content">
+      <%= yield %>
+    </div>
 
-<footer>
+    <footer>
+      Built by Tobi • Ravens Scouting Project 🩷
+    </footer>
 
-Built by Tobi • Ravens Scouting Project 🩷
-
-</footer>
-
-</div>
   </body>
 </html>

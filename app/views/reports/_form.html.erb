@@ -99,6 +99,11 @@
     <%= form.text_area :notes %>
   </div>
 
+  <div>
+    <%= form.label :photo, "Player Photo" %>
+    <%= form.file_field :photo, accept: "image/*" %>
+  </div>
+
   <%= form.submit "Save Scouting Report",
                   class: "btn" %>
 

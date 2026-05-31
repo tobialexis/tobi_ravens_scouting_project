@@ -1,89 +1,94 @@
 <div class="card">
 
-  <div class="avatar">
-    <%= initials(@report.player_name) %>
+  <div class="player-card-content">
+
+    <div class="player-photo-wrapper">
+
+      <% if @report.photo.attached? %>
+        <%= image_tag @report.photo, class: "player-photo-large" %>
+      <% else %>
+        <div class="player-photo-placeholder">
+          No Photo
+        </div>
+      <% end %>
+
+    </div>
+
+    <div class="player-card-details">
+
+<h1><%= @report.player_name %></h1>
+      <p>
+        <strong>Position:</strong>
+        <%= @report.position %>
+      </p>
+
+      <p>
+        <strong>College:</strong>
+        <%= @report.college %>
+      </p>
+
+      <p>
+        <strong>Height:</strong>
+        <%= @report.height %>
+      </p>
+
+      <p>
+        <strong>Weight:</strong>
+        <%= @report.weight %>
+      </p>
+
+      <p>
+        <strong>40 Yard Time:</strong>
+        <%= @report.speed_40 %>
+      </p>
+
+      <p>
+        <strong>NFL Comparison:</strong>
+        <%= @report.player_comparison %>
+      </p>
+
+      <p>
+        <strong>Draft Projection:</strong>
+        <%= @report.draft_projection %>
+      </p>
+
+      <p>
+        <strong>Strengths:</strong>
+        <br>
+        <%= @report.strengths %>
+      </p>
+
+      <p>
+        <strong>Weaknesses:</strong>
+        <br>
+        <%= @report.weaknesses %>
+      </p>
+
+      <p>
+        <strong>Scout Notes:</strong>
+        <br>
+        <%= @report.notes %>
+      </p>
+
+      <p>
+        <strong>Grade:</strong>
+        <%= @report.grade %>
+      </p>
+
+      <div class="grade-badge <%= badge_class(@report.grade) %>">
+        <%= scout_grade_label(@report.grade) %>
+      </div>
+
+
+
+      <p>
+        <strong>Last Updated:</strong>
+        <%= @report.updated_at.strftime("%B %d, %Y at %I:%M %p") %>
+      </p>
+
+    </div>
+
   </div>
-
-  <h1>🏈 <%= @report.player_name %></h1>
-
-  <p>
-    <strong>Position:</strong>
-    <%= @report.position %>
-  </p>
-
-  <p>
-    <strong>College:</strong>
-    <%= @report.college %>
-  </p>
-
-  <p>
-    <strong>Height:</strong>
-    <%= @report.height %>
-  </p>
-
-  <p>
-    <strong>Weight:</strong>
-    <%= @report.weight %>
-  </p>
-
-  <p>
-    <strong>40 Yard Time:</strong>
-    <%= @report.speed_40 %>
-  </p>
-
-  <p>
-    <strong>NFL Comparison:</strong>
-    <%= @report.player_comparison %>
-  </p>
-
-  <p>
-    <strong>Draft Projection:</strong>
-    <%= @report.draft_projection %>
-  </p>
-
-  <p>
-    <strong>Strengths:</strong>
-    <br>
-    <%= @report.strengths %>
-  </p>
-
-  <p>
-    <strong>Weaknesses:</strong>
-    <br>
-    <%= @report.weaknesses %>
-  </p>
-
-  <p>
-    <strong>Scout Notes:</strong>
-    <br>
-    <%= @report.notes %>
-  </p>
-
-  <p>
-    <strong>Grade:</strong>
-    <%= @report.grade %>
-  </p>
-
-  <div class="grade-badge <%= badge_class(@report.grade) %>">
-    <%= scout_grade_label(@report.grade) %>
-  </div>
-
-  <div class="card scout-summary">
-
-    <h3>📝 Scout Summary</h3>
-
-    <p>
-      This prospect projects as a
-      <strong><%= scout_grade_label(@report.grade) %></strong>
-      based on the current evaluation.
-    </p>
-
-  </div>
-
-  <p>
-    <strong>Last Updated:</strong>
-    <%= @report.updated_at.strftime("%B %d, %Y at %I:%M %p") %>
-  </p>
 
   <div class="button-group">
 
@@ -94,7 +99,7 @@
     </div>
 
     <div>
-      <%= link_to "✏ Edit",
+      <%= link_to "Edit",
                   edit_report_path(@report),
                   class: "btn" %>
     </div>

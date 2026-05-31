@@ -4,16 +4,16 @@ module ReportsHelper
 
     case grade
     when 90..100
-      "🚀 Elite Prospect"
+      "Elite Prospect"
 
     when 75..89
-      "⭐ High Upside"
+      "High Upside"
 
     when 60..74
-      "💪 Solid Contributor"
+      "Solid Contributor"
 
     else
-      "🌱 Development Prospect"
+      "Development Prospect"
 
     end
 

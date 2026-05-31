@@ -1,13 +1,13 @@
 Report.destroy_all
 
-Report.create(
+jaylen = Report.create!(
   player_name: "Jaylen Rivers",
   position: "QB",
   college: "Florida State",
   height: "6'3",
   weight: "212 lbs",
   speed_40: "4.49",
-  player_comparison: "Dual-threat quarterback with explosive mobility",
+  player_comparison: "Dual threat quarterback with explosive mobility",
   draft_projection: "Round 1",
   strengths: "Pocket movement, athleticism, leadership",
   weaknesses: "Deep ball consistency",
@@ -15,7 +15,12 @@ Report.create(
   notes: "Shows excellent field vision and extends plays under pressure."
 )
 
-Report.create(
+jaylen.photo.attach(
+  io: File.open(Rails.root.join("app/assets/images/jaylenrivers.webp")),
+  filename: "jaylenrivers.webp"
+)
+
+micah = Report.create!(
   player_name: "Micah Steele",
   position: "WR",
   college: "Oregon",
@@ -30,7 +35,12 @@ Report.create(
   notes: "Creates space consistently and performs well after the catch."
 )
 
-Report.create(
+micah.photo.attach(
+  io: File.open(Rails.root.join("app/assets/images/micahsteele.webp")),
+  filename: "micahsteele.webp"
+)
+
+elijah = Report.create!(
   player_name: "Elijah Brooks",
   position: "CB",
   college: "Michigan",
@@ -45,7 +55,12 @@ Report.create(
   notes: "Competitive defender with strong recovery speed."
 )
 
-Report.create(
+elijah.photo.attach(
+  io: File.open(Rails.root.join("app/assets/images/elijahbrooks.webp")),
+  filename: "elijahbrooks.webp"
+)
+
+zion = Report.create!(
   player_name: "Zion Carter",
   position: "LB",
   college: "Texas",
@@ -57,5 +72,10 @@ Report.create(
   strengths: "Pursuit angles, tackling, football IQ",
   weaknesses: "Pass coverage technique",
   grade: 84,
-  notes: "High-motor defender with strong leadership qualities."
+  notes: "High motor defender with strong leadership qualities."
+)
+
+zion.photo.attach(
+  io: File.open(Rails.root.join("app/assets/images/zioncarter.webp")),
+  filename: "zioncarter.webp"
 )
