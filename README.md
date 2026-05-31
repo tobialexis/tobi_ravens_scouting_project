@@ -4,7 +4,7 @@
 
 This project was built as part of the Baltimore Ravens Football Systems Developer application process. The goal was to create a simple application that allows users to create and manage football scouting reports.
 
-While building the project, I wanted to stay within the requested scope and focus on creating a tool that felt realistic for scouting workflows rather than going into a large football management system. I also wanted the application to reflect some personality through small design choices while keeping it organized and easy to use.
+While building the project, I wanted to stay within the requested scope and focus on creating a tool that felt realistic for scouting workflows rather than going into a large football management system. I also wanted the application to reflect some of my personality through small design choices while keeping it organized and easy to use.
 
 The application allows users to create reports for players, record evaluations, assign grades, and review scouting information in a structured way.
 
@@ -34,7 +34,7 @@ Each report contains:
 - College
 - Height
 - Weight
-- 40-yard time
+- 40 yard time
 - Player comparison
 - Draft projection
 - Strengths
@@ -47,15 +47,15 @@ Each report contains:
 
 A big goal for this project was keeping the application simple while still making it feel like an actual scouting tool.
 
-Some choices I intentionally made:
+Some choices I intentionally made were::
 
-- Added football-specific scouting fields to make reports feel more realistic
+- Added football specific scouting fields to make reports feel more realistic
 - Included prospect labels tied to player grades
 - Added filtering by position to make reports easier to navigate
 - Added small UI details and personalized styling to improve usability
 - Used fictional player data rather than relying entirely on well known athletes
 
-I wanted the project to feel practical and focused without becoming overly complex.
+My aim was to make the project to feel practical and focused without becoming overly complex.
 
 
 ## Technologies Used
@@ -70,7 +70,15 @@ I wanted the project to feel practical and focused without becoming overly compl
 
 
 ## Running the Application Locally
+Before running the application, please make sure you have the following:
+- Ruby 4.0.5
+- Ruby on Rails 8.1.3
+- SQLite
+- Git
 
+Now you're good to go!
+
+My project was developed and tested using Ruby 4.0.5 and Rails 8.1.3
 ### Step 1: Download a copy of the project
 
 Open a command line window on your computer:
