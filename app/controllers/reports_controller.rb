@@ -68,6 +68,7 @@ class ReportsController < ApplicationController
         :position,
         :college,
         :height,
+        :age,
         :weight,
         :speed_40,
         :player_comparison,

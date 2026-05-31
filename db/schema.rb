@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_05_31_123450) do
+ActiveRecord::Schema[8.1].define(version: 2026_05_31_213655) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.bigint "blob_id", null: false
     t.datetime "created_at", null: false
@@ -40,6 +40,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_05_31_123450) do
   end
 
   create_table "reports", force: :cascade do |t|
+    t.integer "age"
     t.string "college"
     t.datetime "created_at", null: false
     t.string "draft_projection"
