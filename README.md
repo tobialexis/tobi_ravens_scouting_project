@@ -71,8 +71,6 @@ I wanted the project to feel practical and focused without becoming overly compl
 
 ## Running the Application Locally
 
-Follow the steps below to run the application on your computer.
-
 ### Step 1: Download a copy of the project
 
 Open a command line window on your computer:
